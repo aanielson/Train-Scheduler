@@ -15,10 +15,90 @@
     <title>Train Scheduler</title>
 </head>
 <body>
+    <div class="container">
+        <!--Heading with "Anytime is Train Time" "Choo Choo. Chee Chee" lol-->
+        <div class="jumbotron">
+            <h1 class="header">Anytime is Train Time</h1>
+            <h2 class="second-header">Choo Choo. Chee Chee.</h2>
+        </div>
 
-<!--Link to JQUERY-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!--Link to javascript file-->
-<script src="assets/javascript/train.js"></script>
+        <!--Current Train Schedule Display-->
+        <!--Headings are Train Name, Destination, Frequency (min), Next Arrival, and Minutes Away-->
+        <div id="current-trains" class="row">
+            <div class="col-lg-12">
+                <div class="card card-default mb-4">
+                  <div class="card-header bg-primary text-white">
+                    Current Train Schedule
+                  </div>
+                  <table class="table">
+                      <thead>
+                        <tr>
+                            <!-- The scope attribute specifies that this is a header for a column -->
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                      <tr>
+                          <td>Trenton Express</td>
+                          <td>Trenton</td>
+                          <td>25</td>
+                          <td>05:35</td>
+                          <td>10</td>
+                      </tr>
+                      <!-- Insert additional train rows here -->
+
+                      </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+        
+        <!--Add Train Display-->
+        <!--Input boxes for train name, destination, first train time (HH:mm - military time, and frequency (min-->
+        <div id="new-train" class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                    <div class="card-header bg-primary text-white">
+                        Add Train
+                    </div>
+                    <div class="card-body">
+        
+                        <!-- Add Train form (note the various input "types")-->
+                        <form role="form">
+                        <div class="form-group row">
+                            <label for="name-input">Train Name</label>
+                            <input class="form-control" id="name-input" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <label for="email-input">Destination</label>
+                            <input class="form-control" id="destination-input" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <!--Still need to find the correct input type for military time-->
+                            <label for="age-input">First Train Time (HH:mm - military time)</label>
+                            <input class="form-control" id="time1-input" type="time">
+                        </div>
+                        <div class="form-group row">
+                            <label for="comment-input">Frequency (min)</label>
+                            <input class="form-control" id="frequency-input" type="number"></input>
+                        </div>
+                        <button class="btn btn-default btn-primary" id="add-train" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Links to Firebase-->
+
+    <!--Link to JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Link to javascript file-->
+    <script src="assets/javascript/train.js"></script>
 </body>
 </html>
