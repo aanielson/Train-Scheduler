@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Link to restting any styling-->
     <link rel="stylesheet" href="assets/css/reset.css">
-    <!--Link to BOOTSRAP-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!--Link to OWN STYLING-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!--Link to google font-->
-    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
+    <!--Link to moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 
     <title>Train Scheduler</title>
 </head>
@@ -42,7 +48,7 @@
                         </tr>
                       </thead>
 
-                      <tbody>
+                      <tbody id='add-row'>
                       <tr>
                           <td>Trenton Express</td>
                           <td>Trenton</td>
@@ -72,33 +78,29 @@
                         <form role="form">
                         <div class="form-group row">
                             <label for="name-input">Train Name</label>
-                            <input class="form-control" id="name-input" type="text">
+                            <input class="form-control" id="name-input" type="text" />
                         </div>
                         <div class="form-group row">
                             <label for="destination-input">Destination</label>
-                            <input class="form-control" id="destination-input" type="text">
+                            <input class="form-control" id="destination-input" type="text" />
                         </div>
                         <div class="form-group row">
                             <!--Still need to find the correct input type for military time-->
                             <label for="first-train-input">First Train Time (HH:mm - military time)</label>
-                            <input class="form-control" id="first-train-input" type="time">
+                            <input class="form-control" id="first-train-input" type="time" name="time" />
                         </div>
                         <div class="form-group row">
                             <label for="frequency-input">Frequency (min)</label>
-                            <input class="form-control" id="frequency-input" type="number"></input>
+                            <input class="form-control" id="frequency-input" type="number" />
                         </div>
-                        <button class="btn btn-default btn-primary" id="add-train" type="submit">Submit</button>
+                        <button class="btn btn-default btn-primary" id="add-train">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--Links to Firebase-->
-
-    <!--Link to JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--Link to javascript file-->
-    <script src="assets/javascript/train.js"></script>
+    <script src="assets/js/train.js"></script>
 </body>
 </html>
