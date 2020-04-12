@@ -53,7 +53,7 @@ $(document).ready(function(){
     });
 
     database.ref().on('child_added', function(childSnapshot) {
-        var firstTrainNew = moment(childSnapshot.val().firstTrain, 'hh:mm');
+        var firstTrainNew = moment(childSnapshot.val().firstTrain, 'HH:mm');
         // Difference between the current and firstTrain
         var diffTIme = moment().diff(moment(firstTrainNew), 'minutes');
         var remainder = diffTIme % childSnapshot.val().frequency;
@@ -71,7 +71,7 @@ $(document).ready(function(){
             var trainName = $("<td>").text(childSnapshot.val().name);
             var trainDestination = $("<td>").text(childSnapshot.val().destination);
             var freqMin = $("<td>").text(childSnapshot.val().frequency);
-            var nextTrainDisplay = $("<td>").text(moment(nextTrain).format('hh:mm'));
+            var nextTrainDisplay = $("<td>").text(moment(nextTrain).format('HH:mm'));
             var minAwayDisplay = $("<td>").text(minAway);
             //append the newly create table data to the rable row
             tRow.append(trainName, trainDestination, freqMin, nextTrainDisplay, minAwayDisplay);
@@ -81,3 +81,13 @@ $(document).ready(function(){
         createRow();
     });
 });
+
+document.querySelectorAll('input[type=number]')
+  .forEach(e => e.oninput = () => {
+    // Always 2 digits
+    if (e.value.length >= 2) e.value = e.value.slice(0, 2);
+    // 0 on the left (doesn't work on FF)
+    if (e.value.length === 1) e.value = '0' + e.value;
+    // Avoiding letters on FF
+    if (!e.value) e.value = '00';
+  });
