@@ -4,14 +4,14 @@ $(document).ready(function(){
     // (Ex. 3.0 != 3.7.0)
     // Your web app's Firebase configuration
     var firebaseConfig = {
-        apiKey: "AIzaSyA2F4bObZL9zh9QoGJcjQtzX6AS934g_OE",
-        authDomain: "train-schedule-ac90f.firebaseapp.com",
-        databaseURL: "https://train-schedule-ac90f.firebaseio.com",
-        projectId: "train-schedule-ac90f",
-        storageBucket: "train-schedule-ac90f.appspot.com",
-        messagingSenderId: "577975286483",
-        appId: "1:577975286483:web:2e32223eaffb0639677226",
-        measurementId: "G-WZH3CT7JNY"
+        apiKey: "AIzaSyDtW8hfELIfL4zUPrDKBSJMqBuoin4IW3E",
+        authDomain: "aanielson-695a2.firebaseapp.com",
+        databaseURL: "https://aanielson-695a2.firebaseio.com",
+        projectId: "aanielson-695a2",
+        storageBucket: "aanielson-695a2.appspot.com",
+        messagingSenderId: "643409531585",
+        appId: "1:643409531585:web:a89f79b86cdb386849fa40",
+        measurementId: "G-Y10051H55D"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
