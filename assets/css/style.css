@@ -1,0 +1,32 @@
+body {
+    background-color: #071E55;
+    color: #071E55;
+    font-size: medium;
+}
+.jumbotron {
+    background-color: #143074;
+    /* color: #E894A7; */
+}
+.card-header {
+    background-color: #143074;
+}
+.card {
+    background-color: #3868D9;
+}
+
+.btn {
+    background-color: #143074;
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+}
+h2 {
+    font-size: x-large;
+
+}
+h3 {
+    font-size: larger;
+
+}
