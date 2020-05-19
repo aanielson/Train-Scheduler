@@ -1,21 +1,22 @@
 body {
-    background-color: #071E55;
+    /* background-color: #071E55; */
+    background-image: url(../images/rail-road.jpg);
     color: #071E55;
     font-size: medium;
 }
 .jumbotron {
-    background-color: #143074;
+    background-color: gray;
     /* color: #E894A7; */
 }
 .card-header {
-    background-color: #143074;
+    background-color: gray;
 }
 .card {
-    background-color: #3868D9;
+    background-color: darkgray;
 }
 
 .btn {
-    background-color: #143074;
+    background-color: gray;
 }
 
 h1 {
